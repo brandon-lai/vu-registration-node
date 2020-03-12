@@ -1,3 +1,5 @@
+Note: This is a very temporary fix, if someone stumbles upon this in the future please update the termCode in vu-registration.js. I'll leave finding the new term code to you. --Sahas Goli
+
 **IT IS NOT IN YOUR INTEREST TO SHARE THIS SCRIPT. IF YOU DO, I WILL ~~PERSONALLY~~ HAVE SOMEONE BEAT YOU UP. -Yunyu**
 
 *If you are enrolled in a graduate program, please follow the [graduate instructions](https://github.com/yunyu/vu-registration-node/blob/master/GRAD_INSTRUCTIONS.md), and then return to this document.*
