@@ -120,9 +120,8 @@ async function saveCookie(username, password) {
         uri: `https://acad.app.vanderbilt.edu/more/SearchClasses!input.action?commodoreIdToLoad=${commodoreId}`,
         transform,
     });
-    const termCode = $('#selectedTerm')
-        .find('[selected="selected"]')
-        .attr('value');
+    
+    const termCode = "0955";
 
     if (!termCode || !commodoreId) {
         throw new Error(termCode + ' ' + commodoreId);
