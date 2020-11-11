@@ -121,7 +121,7 @@ async function saveCookie(username, password) {
         transform,
     });
     
-    const termCode = "0960";
+    const termCode = "0955";
 
     if (!termCode || !commodoreId) {
         throw new Error(termCode + ' ' + commodoreId);
