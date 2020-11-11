@@ -103,7 +103,7 @@ async function saveCookie(username, password) {
     const formData = { action: $('form').attr('action') };
 
     const loginRes = await rp.post({
-        uri: `https://sso.vanderbilt.edu${formData.action}`,
+        uri: `https://sso-login.vanderbilt.edu${formData.action}`,
         resolveWithFullResponse: true,
         followAllRedirects: true,
         form: {
@@ -114,17 +114,24 @@ async function saveCookie(username, password) {
         },
     });
 
-    const commodoreId = querystring.parse(loginRes.request.uri.query)
-        .commodoreId;
-    $ = await rp({
-        uri: `https://acad.app.vanderbilt.edu/more/SearchClasses!input.action?commodoreIdToLoad=${commodoreId}`,
-        transform,
-    });
+    // var commodoreId = querystring.parse(loginRes.request.uri.query)
+    //     .commodoreId;
+    // $ = await rp({
+    //     // uri: `https://acad.app.vanderbilt.edu/more/SearchClasses!input.action?commodoreIdToLoad=${commodoreId}`,
+    //     url: `https://acad.app.vanderbilt.edu/student-search/StudentLanding.action?commodoreId=${commodoreId}`,
+    //     transform,
+    // });
+
+    // commodoreId = commodoreId.substring(2); //remove C0
+    // commodoreId = commodoreId.slice(0, -1); //remove last digit
+    // commodoreId = '000' + commodoreId;
+
+    const commodoreId = 'Your_commodoreId';
     
     const termCode = "0960";
 
     if (!termCode || !commodoreId) {
-        throw new Error(termCode + ' ' + commodoreId);
+        throw new Error("Update the term code!" + termCode + ' ' + commodoreId);
     }
 
     const result = { termCode, commodoreId };
