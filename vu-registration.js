@@ -103,7 +103,7 @@ async function saveCookie(username, password) {
     const formData = { action: $('form').attr('action') };
 
     const loginRes = await rp.post({
-        uri: `https://sso.vanderbilt.edu${formData.action}`,
+        uri: `https://sso-login.vanderbilt.edu${formData.action}`,
         resolveWithFullResponse: true,
         followAllRedirects: true,
         form: {
